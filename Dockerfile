@@ -28,14 +28,6 @@ RUN echo '    AllowOverride All' >> /etc/apache2/sites-available/000-default.con
 RUN echo '    Require all granted' >> /etc/apache2/sites-available/000-default.conf
 RUN echo '</Directory>' >> /etc/apache2/sites-available/000-default.conf
 
-WORKDIR /tmp
-RUN wget https://files.spip.net/spip/archives/spip-v4.4.3.zip && \
-    unzip spip-v4.4.3.zip -d /var/www/spip && \
-    rm spip-v4.4.3.zip
-
-WORKDIR /var/www/spip
-RUN wget https://get.spip.net/spip_loader.php
-
 RUN chown -R www-data:www-data /var/www/spip
 RUN chmod -R 755 /var/www/spip
 
