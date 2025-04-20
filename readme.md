@@ -12,7 +12,7 @@ docker buildx build -f ./Dockerfile .
 
 ## 🚀 Docker Compose
 
-Before starting, configure your MySQL credentials (password, etc.) in docker-compose.yml.
+Before starting, configure your MySQL credentials (password, etc.) in `docker-compose.yml`
 
 Then run:
 
