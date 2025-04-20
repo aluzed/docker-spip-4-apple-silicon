@@ -1,3 +1,0 @@
-2025-04-20 09:57:17 192.168.65.1 (pid 12) :Pri:ERREUR: Erreur 1007 de mysql: Can't create database 'spip_db'; database exists
-in /var/www/spip/ecrire/install/etape_3.php L52 [sql_create_base(),install_bases(),install_etape_3_dist(),exec_install_dist()]
-CREATE DATABASE `spip_db`
