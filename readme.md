@@ -1,27 +1,33 @@
-# Dockerized Spip 4.4.3 with Apache and Mysql
+# Dockerized SPIP 4.4.3 with Apache & MySQL
 
-This project run only on ARM Apple Silicon CPUs.
+> ⚠️ This setup is compatible **only with ARM-based Apple Silicon CPUs** (e.g. M1, M2).
 
-## Docker build
+---
 
-```
+## 🛠 Docker Build
+
+```bash
 docker buildx build -f ./Dockerfile .
 ```
 
-## Docker compose
+## 🚀 Docker Compose
 
-Configure your mysql account (password, etc...) in `docker-compose.yml`
+Before starting, configure your MySQL credentials (password, etc.) in docker-compose.yml.
 
-```
+Then run:
+
+```bash
 docker compose up -d
 ```
 
-## Configure
+---
+
+## 🔧 Configuration
 
 Visit: http://localhost:3000
+
 Then: http://localhost:3000/spip_loader.php
+
 Then: http://localhost:3000/ecrire
 
-Configure with your docker configuration:
-
-For the database hostname, replace `localhost` with `mysql`, there you should be good to go.
+During installation, when asked for the database hostname, use `msql` instead of `localhost`, That should do the trick ✅
