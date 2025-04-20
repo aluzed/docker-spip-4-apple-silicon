@@ -36,8 +36,6 @@ RUN wget https://files.spip.net/spip/archives/spip-v4.4.3.zip && \
 WORKDIR /var/www/spip
 RUN wget https://get.spip.net/spip_loader.php
 
-RUN find /var/www/spip -type d -exec chmod 755 {} \;
-RUN find /var/www/spip -type f -exec chmod 644 {} \;
 RUN chown -R www-data:www-data /var/www/spip
 RUN chmod -R 755 /var/www/spip
 
