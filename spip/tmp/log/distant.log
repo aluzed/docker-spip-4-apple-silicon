@@ -1,0 +1,4 @@
+2025-04-20 09:58:02 192.168.65.1 (pid 12) :Pri:ERREUR: Erreur connexion 111 Connection refused
+2025-04-20 09:58:02 192.168.65.1 (pid 12) :Pri:ERREUR: ECHEC init_http http://localhost:3000/tmp/.ok
+2025-04-20 09:58:07 192.168.65.1 (pid 13) :Pri:ERREUR: Erreur connexion 111 Connection refused
+2025-04-20 09:58:07 192.168.65.1 (pid 13) :Pri:ERREUR: ECHEC init_http http://localhost:3000/tmp/.ok

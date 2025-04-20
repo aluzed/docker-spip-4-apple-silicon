@@ -1,0 +1,36 @@
+version: "3.8"
+
+services:
+  spip:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: spip-apache
+    ports:
+      - "3000:80"
+    volumes:
+      - ./spip:/var/www/spip
+    depends_on:
+      - mysql
+    environment:
+      - PHP_MAX_EXECUTION_TIME=120
+      - PHP_MEMORY_LIMIT=1024M
+      - PHP_POST_MAX_SIZE=64M
+      - PHP_UPLOAD_MAX_FILESIZE=48M
+    restart: unless-stopped
+
+  mysql:
+    image: mysql:8.0
+    platform: linux/arm64
+    container_name: spip-mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=root_password
+      - MYSQL_DATABASE=spip_db
+      - MYSQL_USER=spip_user
+      - MYSQL_PASSWORD=spip_password
+    volumes:
+      - mysql_data:/var/lib/mysql
+    restart: unless-stopped
+
+volumes:
+  mysql_data:
